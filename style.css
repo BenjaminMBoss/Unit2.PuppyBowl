@@ -1,3 +1,43 @@
 h1 {
-    color:brown;
+    color:saddlebrown;
+}
+body {
+    background-color:tan;
+}
+.allPuppyContainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.allPuppyContainers > div {
+    display: inline-block;
+    margin: .5rem;
+    text-align: center;
+    width: 275px;
+    height: 300px;
+    border: 2px saddlebrown solid;
+    border-radius: 0.5rem;
+}
+
+#allPuppyImage {
+    height: auto;
+    width: 50%;
+}
+
+#puppyName {
+    color: saddlebrown;
+}
+
+.puppyImage {
+    height: auto;
+    width: 25%;
+}
+
+.selectedPuppy {
+    color: saddlebrown;
+}
+
+.backTag {
+    color: black;
 }

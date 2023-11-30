@@ -17,9 +17,9 @@ async function getPuppies() {
 
 function render() {
     const html = puppyList.map((puppy) => {
-        return `<div> <a href=#${puppy.name}> 
+        return `<div> <a id = "puppyName" href=#${puppy.name}> 
             <h2> ${puppy.name} </h2> </a>
-            <h3> ${puppy.breed} </h3>
+            <div> <img id = "allPuppyImage" src = ${puppy.imageUrl} /> </div>
             </div>
             `
     })
@@ -33,10 +33,12 @@ function render() {
 
     if (singlePupFound) {
         selectedPuppyDiv.innerHTML =   `
+        <div class = "selectedPuppy">
         <h2> Selected Puppy: ${singlePupFound.name}</h2>
-        <h3> ${singlePupFound.breed} </h3>
-        <img src = ${singlePupFound.imageUrl}>
-        <div> <a href=#> Back to all puppies</a> </div>
+        <h3> Breed: ${singlePupFound.breed} </h3>
+        <img class = "puppyImage" src = ${singlePupFound.imageUrl}>
+        <div> <a class = "backTag" href=#> Back to all puppies</a> </div>
+        </div>
         `
     } else {
         selectedPuppyDiv.innerHTML = ""
